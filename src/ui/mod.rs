@@ -15,7 +15,7 @@ pub fn draw_ui<T: Backend>(frame: &mut Frame<T>, config: &CompleteConfig) {
     let vertical_chunks = Layout::default()
         .direction(Direction::Vertical)
         .margin(margin)
-        .constraints(vertical_chunk_constraints.as_ref())
+        .constraints(vertical_chunk_constraints)
         .split(frame.size());
 
     let table = Paragraph::new("Some text").block(Block::default().borders(Borders::ALL));
